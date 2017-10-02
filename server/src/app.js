@@ -1,9 +1,10 @@
-const functions = require('firebase-functions');
 
 const express = require('express')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
 const cors = require('cors')
+const config = require('./config/config')
+
 
 const app = express()
 
@@ -13,6 +14,4 @@ app.use(cors())
 
 require('./routes')(app)
 
-const api = functions.https.onRequest(app);
-
-module.exports = {api}
+app.listen(config.port)

@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "server for fake news app",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "nodemon src/app.js",
+    "lint": "./node_modules/.bin/eslint src/**/*.js"
+  },
+  "author": "nir tamir",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.7.1",
+    "eslint-config-google": "^0.9.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.1",
+    "google-trends-api": "^4.2.2",
+    "morgan": "^1.9.0"
+  }
+}
