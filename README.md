@@ -17,3 +17,24 @@
 
 &#x202b;
 ישנן תמונות בתיקייה של demo
+
+## Running the code
+
+In order to run the code on your localhost sould install Node.js.
+checked with v8.5.0 but sould work with 6.11.x
+
+### Running the client
+
+``` bash
+cd client
+npm install
+npm start
+```
+
+### Running the server
+
+``` bash
+cd server
+npm install
+npm start
+```
