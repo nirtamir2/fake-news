@@ -14,4 +14,5 @@ app.use(cors())
 
 require('./routes')(app)
 
-app.listen(config.port)
+app.listen(config.port, () =>
+    console.log(`server started at port ${config.port}`))
