@@ -20,8 +20,8 @@
 
 ## Running the code
 
-In order to run the code on your localhost sould install Node.js.
-checked with v8.5.0 but sould work with 6.11.x
+In order to run the code on your localhost should install Node.js.
+checked with v8.5.0 but should work with 6.11.x
 
 ### Running the client
 
