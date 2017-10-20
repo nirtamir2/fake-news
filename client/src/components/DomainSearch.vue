@@ -33,6 +33,25 @@
         </v-card>
       </v-flex>
     </v-layout>
+
+  <v-layout v-if="data && data.reliability" class="mt-3">
+      <v-flex xs12 sm6 offset-sm3>
+        <v-card>
+          <v-card-title primary-title>
+            <div>
+              <h3 class="headline mb-0">Reliability</h3>
+                <v-list>
+                  <v-list-tile>type: {{data.reliability.type}}</v-list-tile>
+                  <v-list-tile>2nd type: {{data.reliability['2nd type']}}</v-list-tile>
+                  <v-list-tile>3rd type: {{data.reliability['2nd type']}}</v-list-tile>
+                  <v-list-tile>Source Notes (things to know?): {{data.reliability['Source Notes (things to know?)']}}</v-list-tile>
+                </v-list>
+              </div>
+          </v-card-title>
+        </v-card>
+      </v-flex>
+    </v-layout>
+
   <div v-if="error">{{error}}</div>
   </div>
 </template>
