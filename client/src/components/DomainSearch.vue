@@ -10,25 +10,24 @@
           <v-card-title primary-title>
             <div>
               <h3 class="headline mb-0">{{data.name}}</h3>
-                <ul>
-                  <li>Created at: {{data.created}}</li>
-                  <li>Changed at: {{data.changed}}</li>
-
-                <ul v-if="data.contacts && data.contacts.owner.length > 0">
-                  <hr v-for="(owner,index) in data.contacts.owner" :key="index">
-                    <li>Organization: {{owner.organization || 'not found'}}</li>
-                    <li>Email: {{owner.email || 'not found'}}</li>
-                    <li>Address: {{owner.address || 'not found'}}</li>
-                    <li>Zipcode: {{owner.zipcode || 'not found'}}</li>
-                    <li>City: {{owner.city || 'not found'}}</li>
-                    <li>State: {{owner.state || 'not found'}}</li>
-                    <li>Country: {{owner.country || 'not found'}}</li>
-                    <li>Phone: {{owner.phone || 'not found'}}</li>
-                    <li>Fax: {{owner.fax || 'not found'}}</li>
-                  </hr>
-                </ul>
-                <li v-else>The owner is not found</li>
-                </ul>
+                <v-list>
+                  <v-list-tile>Created at: {{data.created || '?'}}</v-list-tile>
+                  <v-list-tile>Changed at: {{data.changed || '?'}}</v-list-tile>
+                <div v-if="data.contacts && data.contacts.owner.length > 0">
+                  <div v-for="(owner,index) in data.contacts.owner" :key="index">
+                    <v-list-tile>Organization: {{owner.organization || 'not found'}}</v-list-tile>
+                    <v-list-tile>Email: {{owner.email || 'not found'}}</v-list-tile>
+                    <v-list-tile>Address: {{owner.address || 'not found'}}</v-list-tile>
+                    <v-list-tile>Zipcode: {{owner.zipcode || 'not found'}}</v-list-tile>
+                    <v-list-tile>City: {{owner.city || 'not found'}}</v-list-tile>
+                    <v-list-tile>State: {{owner.state || 'not found'}}</v-list-tile>
+                    <v-list-tile>Country: {{owner.country || 'not found'}}</v-list-tile>
+                    <v-list-tile>Phone: {{owner.phone || 'not found'}}</v-list-tile>
+                    <v-list-tile>Fax: {{owner.fax || 'not found'}}</v-list-tile>
+                  </div>
+                </div>
+                <v-list-tile v-else>The owner is not found</v-list-tile>
+                </v-list>
               </div>
           </v-card-title>
         </v-card>
